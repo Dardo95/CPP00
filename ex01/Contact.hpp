@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   contact.hpp                                        :+:      :+:    :+:   */
+/*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: enogueir <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: enogueir <enogueir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/29 16:55:58 by enogueir          #+#    #+#             */
-/*   Updated: 2025/07/29 17:04:32 by enogueir         ###   ########.fr       */
+/*   Updated: 2025/07/30 09:05:44 by enogueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class Contact
 		std::string lastName;
 		std::string nickName;
 		std::string phoneNumber;
-		std::string darkestSectret;
+		std::string darkestSecret;
 
 	public:
 		Contact();
@@ -30,7 +30,7 @@ class Contact
 		void setFirstName(const std::string &value);
 		void setLastName(const std::string &value);
 		void setNickName(const std::string &value);
-		void setLastPhoneNumber(const std::string &value);
+		void setPhoneNumber(const std::string &value);
 		void setDarkestSecret(const std::string &value);
 
 		std::string getFirstname() const;

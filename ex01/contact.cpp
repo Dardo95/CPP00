@@ -3,45 +3,78 @@
 /*                                                        :::      ::::::::   */
 /*   contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: enogueir <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: enogueir <enogueir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/29 17:04:41 by enogueir          #+#    #+#             */
-/*   Updated: 2025/07/29 17:24:52 by enogueir         ###   ########.fr       */
+/*   Updated: 2025/07/30 09:19:48 by enogueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "contact.hpp"
+#include "Contact.hpp"
 
-contact::contac()
-{
+Contact::Contact(){
 	this->firstName = "";
 	this->lastName = "";
 	this->nickName = "";
-	this->lastPhoneNumber = "";
+	this->phoneNumber = "";
 	this->darkestSecret = "";
 }
 
-void contact::setFirstName(const std:string &value)
+void Contact::setFirstName(const std::string &value)
 {
 	this->firstName = value;
 }
 
-void contact::setLastName(const std::string &value)
+void Contact::setLastName(const std::string &value)
 {
 	this->lastName = value;
 }
 
-void contact::setNickName(const std::string &value)
+void Contact::setNickName(const std::string &value)
 {
 	this->nickName = value;
 }
 
-void contact::setPhoneNumber(const std::string &value)
+void Contact::setPhoneNumber(const std::string &value)
 {
 	this->phoneNumber = value;
 }
 
-void contact::setDarkSecret(const  std::string &value)
+void Contact::setDarkestSecret(const  std::string &value)
 {
-	this->darkestSecret
+	this->darkestSecret = value;
+}
+
+std::string Contact::getFirstname() const
+{
+	return this->firstName;
+}
+
+std::string Contact::getLastName() const
+{
+	return this->lastName;
+}
+
+std::string Contact::getNickName() const
+{
+	return this->nickName;
+}
+
+std::string Contact::getPhoneNumber() const
+{
+	return this->phoneNumber;
+}
+
+std::string Contact::getDarkestSecret() const
+{
+	return this->darkestSecret;
+}
+
+bool Contact::isEmpty() const
+{
+	return this->firstName.empty() &&
+	this->lastName.empty() &&
+	this->nickName.empty() &&
+	this->phoneNumber.empty() &&
+	this->darkestSecret.empty();
 }
