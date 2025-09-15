@@ -6,19 +6,18 @@
 /*   By: enogueir <enogueir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/29 17:04:41 by enogueir          #+#    #+#             */
-/*   Updated: 2025/07/30 09:19:48 by enogueir         ###   ########.fr       */
+/*   Updated: 2025/09/15 09:08:40 by enogueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 
-Contact::Contact(){
-	this->firstName = "";
-	this->lastName = "";
-	this->nickName = "";
-	this->phoneNumber = "";
-	this->darkestSecret = "";
-}
+Contact::Contact():
+	firstName(""),
+	lastName(""),
+	nickName(""),
+	phoneNumber(""),
+	darkestSecret("") {}
 
 void Contact::setFirstName(const std::string &value)
 {
@@ -45,7 +44,7 @@ void Contact::setDarkestSecret(const  std::string &value)
 	this->darkestSecret = value;
 }
 
-std::string Contact::getFirstname() const
+std::string Contact::getFirstName() const
 {
 	return this->firstName;
 }

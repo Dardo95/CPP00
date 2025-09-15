@@ -2,6 +2,10 @@
 # define PHONEBOOK_H
 
 #include "Contact.hpp"
+#include <iostream>
+#include <iomanip>
+#include <string>
+#include <cctype>
 
 class PhoneBook
 {
@@ -9,6 +13,9 @@ class PhoneBook
 		Contact contacts[8];
 		int contactId;
 		int nextIndex;
+
+		std::string promptField(const std::string &fieldName) const;
+		static std::string formatField(const std::string &value);
 	public:
 		PhoneBook();
 

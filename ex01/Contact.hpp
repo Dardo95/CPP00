@@ -6,7 +6,7 @@
 /*   By: enogueir <enogueir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/29 16:55:58 by enogueir          #+#    #+#             */
-/*   Updated: 2025/07/30 09:05:44 by enogueir         ###   ########.fr       */
+/*   Updated: 2025/09/15 09:02:00 by enogueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ class Contact
 		void setPhoneNumber(const std::string &value);
 		void setDarkestSecret(const std::string &value);
 
-		std::string getFirstname() const;
+		std::string getFirstName() const;
 		std::string getLastName() const;
 		std::string getNickName() const;
 		std::string getPhoneNumber() const;
