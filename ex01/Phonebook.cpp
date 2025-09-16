@@ -6,7 +6,7 @@
 /*   By: enogueir <enogueir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/15 09:14:51 by enogueir          #+#    #+#             */
-/*   Updated: 2025/09/15 11:55:15 by enogueir         ###   ########.fr       */
+/*   Updated: 2025/09/16 13:06:29 by enogueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,5 +86,18 @@ void PhoneBook::displayContacts() const
     }
     
     std::cout   << std::setw(10) << "Index" << "|"
-                << std::setw(10) << ""
+                << std::setw(10) << "First Name" << "|"
+                << std::setw(10) << "Last Name" << "|"
+                << std::setw(10) << "Nickname" << "\n";
+    
+    for (int i = 0; i < contactId; ++i)
+    {
+        const Contact &c = contacts[i];
+        std::cout   << std::setw(10) << (i + 1) << "|"
+                    << std::setw(10) << formatField(c.getFirstName()) << "|"
+                    << std::setw(10) << formatField(c.getLastName()) << "|"
+                    << std::setw(10) << formatField(c.getNickName()) << "|";
+    }
+
+    
 }
