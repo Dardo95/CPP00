@@ -1,20 +1,11 @@
 #include <iostream>
 #include "Contact.hpp"
+#include "PhoneBook.hpp"
 
 int main() {
-    Contact c;
-
-    c.setFirstName("Ryner");
-    c.setLastName("al'Thor");
-    c.setNickName("Luz");
-    c.setPhoneNumber("123456789");
-    c.setDarkestSecret("Ama leer");
-
-    std::cout << "Name: " << c.getFirstName() << "\n";
-    std::cout << "Last Name: " << c.getLastName() << "\n";
-    std::cout << "Alias: " << c.getNickName() << "\n";
-    std::cout << "Phone: " << c.getPhoneNumber() << "\n";
-    std::cout << "Secret: " << c.getDarkestSecret() << "\n";
-
+    PhoneBook pb;
+    Contact c; c.setFirstName("Ryner");
+    pb.addContact(c);
+    std::cout << "Size: " << pb.size() << "\n"; // esperado: 1
     return 0;
 }
