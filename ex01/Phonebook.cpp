@@ -34,3 +34,15 @@ void PhoneBook::printTable()const {
 	}
 }
 
+bool PhoneBook::printByIndex(int idx) const {
+	if (idx < 0 || idx >= count)
+		return false;
+
+	std::cout << "First name: " << contacts[idx].getFirstName() << "\n";
+	std::cout << "Last name: " << contacts[idx].getLastName() << "\n";
+	std::cout << "Nickname: " << contacts[idx].getNickName() << "\n";
+	std::cout << "Phone number: " << contacts[idx].getPhoneNumber() << "\n";
+	std::cout << "Darkest secret: " << contacts[idx].getDarkestSecret() << "\n";
+
+	return true;
+}
